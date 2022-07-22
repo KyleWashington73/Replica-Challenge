@@ -1,18 +1,61 @@
 @font-face {
     font-family: "Avenir";
-    src: url("../fonts/AvenirLTStd-Black.otf");
+    src: url("../fonts/AvenirLTStd-Book.otf");
 }
 
 body {
-    /* background-color: #040714; */
-    margin: 0px;
-    padding: 0px;
+    background-color: #040714;
+    color: #fff;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
     font-family: "Avenir", sans-serif;
 }
 
+/* Nav */
+.nav {
+    width: 100%;
+    height: 5rem;
+    background-color: #040714;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
 
+.nav a {
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.nav a:nth-child(1) {
+    border: none;
+    border-radius: 5px;
+    background-color: #0063e5;
+}
+
+.nav a:nth-child(2) {
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 5.3rem;
+    height: 3rem;
+    position: relative;
+    left: 3rem;
+}
+
+.login-container {
+    position: relative;
+    right: 1rem;
+}
 
 /* Page 1 */
 
@@ -21,13 +64,14 @@ body {
     height: 100vh;
     /* border: 1px solid #fff; */
     background-image: url("../img/page-1-bg.jfif");
-    background-size: 100% 110vh;
+    background-size: 100vw 100%;
     background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .page-1-main {
@@ -64,18 +108,51 @@ body {
     color: #fff;
 }
 
+
+.down-arrow {
+    width: 2rem;
+    height: 1rem;
+    position: relative;
+    top: 5rem;
+    cursor: pointer;
+    animation-name: arrow-animation;
+    animation-duration: 1s;
+    /* animation-delay: 0.5s; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow-animation {
+    0% {
+        top: 1rem;
+    }
+    33% {
+        top: 2rem;
+    }
+    75% {
+        top: 1.5rem;
+    }
+    100% {
+        top: 2rem;
+    }
+}
+
 /* Page 2 */
 .page-2 {
-    height: 100vh;
-    /* border: 1px solid #fff; */
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.page-2 > img {
+    width: 50%;
 }
 
 .page-2-text {
+    width: 40%;
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
@@ -96,9 +173,10 @@ body {
 
 /* Page 3 */
 
+
 .page-3 {
     color: #fff;
-    border: 1px solid black;
+    margin-top: 5rem;
 }
 
 .page-3> ul > h2 {
@@ -133,60 +211,87 @@ body {
     margin: 1rem;
 }
 
-html, body {
-    background-color: #080703;
-    margin: 0px;
-}
-
 /* Banner/Page 4 */
- .border {
-    column-count: 2;
-    flex-direction: column;
-    display: flex;
-    height: 415px;
-    padding: 0em;
-}
 
 .page-4 {
-    color: #08010800;
-    width: 100%;
-    height: 5vh;
-}
-
-.page-4-container > div > img {
-    display: flex ;
-    justify-content: flex;
-    border: 1px solid rgb(8, 0, 0);
-    margin: 0rem;
-    vertical-align:center;
-    height 100%;
-    color: #000;
+   width: 100%;
 }
 
 .page-4-container {
-    text-align: right;
-    height: 50px;
-    margin-top: 7em;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #fff;
+    margin: 3rem;
+    padding: 4rem;
 }
 
-.bg-dark {
-    background-color: #212529!important;
-    flex: 1 1 auto;
-    padding: 0rem 0rem;
+.page-4-container > img {
+    width: 40%;
+    margin: 1rem;
 }
 
-    
+.page-4-text p {
+    font-size: 1.3rem;
+}
+
+.page-4-text p > a {
+    color: #fff;
+}
+
+.page-4-text > button {
+    width: 20rem;
+    height: 3.5rem;
+    background-color: #0063e5;
+    border: none;
+    border-radius: 5px;
+    color: #f9f9f9;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
 /* Page 5 */
 
 .page-5 {
     width: 100%;
-    height: 100vh;
-    border: 1px solid #fff;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
 }
 
-.page-5-container {
-    margin-top: 10em;
+.page-5-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.page-5-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-5-article > img {
+    width: 18rem;
+}
+
+.page-5-article > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5rem;
 }
 
 /* Page 6 */
@@ -194,7 +299,41 @@ html, body {
 .page-6 {
     width: 100%;
     height: 130vh;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
+}
+
+.page-6 > h1 {
+    text-align: center;
+}
+
+.page-6-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.page-6-section > button {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #13151d;
+    border: none;
+    height: 5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-6-section button > .sign::after {
+    color: #f9f9f9;
+    content: "+";
+    font-size: 40px;
 }
 
 /* Page 7 */
@@ -202,5 +341,49 @@ html, body {
 .page-7 {
     width: 100%;
     height: 40vh;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.footer-logo {
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.globe {
+    margin-right: 0.3rem;
+    height: 1.3rem;
+}
+
+.footer-down-arrow {
+    margin-left: 0.3rem;
+    width: 0.7rem;
+    height: 0.4rem;
+}
+
+.page-7-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.page-7-section > a {
+    margin: 5px;
+    padding: 5px;
+    color: #ccc9c9;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-7-section > a:hover {
+    color: #fff;
 }
